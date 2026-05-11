@@ -1,0 +1,7 @@
+# this file contains the social media links and usernames of the author
+# the socials will be displayed in the order they are defined here
+cv_pdf: /assets/pdf/cv.pdf
+email: orso.forghieri@gmail.com
+github_username: OrsoF
+linkedin_username: orso-forghieri
+rss_icon: true
