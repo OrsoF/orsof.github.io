@@ -9,11 +9,11 @@ profile:
   image: portrait.jpg
   image_circular: false
   more_info: >
-    <p>Centre de Mathematiques Appliquees</p>
-    <p>Ecole Polytechnique</p>
+    <p>CMAP, École polytechnique</p>
+    <p>Institut Polytechnique de Paris</p>
     <p>Palaiseau, France</p>
 
-selected_papers: true
+selected_papers: false
 social: true
 
 announcements:
@@ -27,33 +27,58 @@ latest_posts:
   limit: 3
 ---
 
-I am a researcher in Reinforcement Learning and Applied Mathematics. My PhD work at [Ecole Polytechnique](https://www.polytechnique.edu/), Palaiseau, France, focused on hierarchical reinforcement learning and scalable methods for large Markov Decision Processes, under the supervision of [Erwan Le Pennec](http://www.cmap.polytechnique.fr/~lepennec/fr/), [Hind Castel-Taleb](http://www-public.tem-tsp.eu/~castel/), and [Emmanuel Hyon](https://www.lip6.fr/actualite/personnes-fiche.php?ident=P216).
+I am Orso Forghieri, a researcher in Reinforcement Learning and Applied Mathematics. My work focuses on Reinforcement Learning, Dynamic Programming, Markov Decision Processes, state abstraction, hierarchical methods, and scalable decision-making.
 
-I hold a Master's degree from Ecole Normale Superieure Paris Saclay and an Engineering Diploma from Ecole Polytechnique.
+My PhD thesis, _Hierarchical Reinforcement Learning for Large Scale Problems_, was prepared at [École polytechnique](https://www.polytechnique.edu/) / Institut Polytechnique de Paris, within CMAP, under the supervision of [Erwan Le Pennec](http://www.cmap.polytechnique.fr/~lepennec/fr/), [Hind Castel-Taleb](http://www-public.tem-tsp.eu/~castel/), and [Emmanuel Hyon](https://www.lip6.fr/actualite/personnes-fiche.php?ident=P216).
 
-## Research
+I have also worked on sequential and explainable decision-making methods for systematic equity trading at Qube Research & Technologies, and on reinforcement-learning approaches for edge-computing service placement in collaboration with Orange Gardens / CMAP.
 
-My research studies how to solve large-scale decision problems when the original state space is too expensive to handle directly. I work on state abstraction, aggregation and disaggregation methods, hierarchical reinforcement learning, and approximate dynamic programming.
+I hold a Master's degree from École normale supérieure Paris-Saclay and an Engineering Diploma from École polytechnique.
 
-Methodologically, I am interested in the links between abstract Markov Decision Processes, projected Bellman operators, value iteration, Q-value iteration, and policy iteration. A recurring goal is to discover useful low-dimensional structure while preserving enough information to compute strong policies.
+## Research interests
 
-These methods are motivated by applications in large-scale planning, resource allocation, network optimization, edge computing, service placement, server energy optimization, market forecasting, and railway-delay propagation modelling.
+- State abstraction.
+- Approximate dynamic programming.
+- Markov aggregation/disaggregation.
+- Scalable MDP solving.
+- Hierarchical reinforcement learning.
+- Planning.
+- Stochastic optimization.
 
-## Research Interests
+## Applications
 
-- State abstraction and Markov aggregation/disaggregation.
-- Hierarchical reinforcement learning and approximate dynamic programming.
-- Scalable MDP solving, planning, policy iteration, value iteration, and Q-value iteration.
-- Reinforcement learning for resource allocation, network optimization, and edge computing.
+- Large-scale planning.
+- Resource allocation.
+- Network optimization.
+- Edge computing and service placement.
+- Market forecasting.
+- Railway-delay propagation.
 
-## Software
+## Selected work
 
-I develop research code for state-space disaggregation, faster MDP solving, Gymnasium environments, and applied forecasting experiments. See the [Software](/projects/) page and my [GitHub profile](https://github.com/OrsoF).
+- [_Hierarchical Reinforcement Learning for Large Scale Problems_](/publications/#forghieri2025hierarchical), PhD thesis, 2025.
+- [_Faster Latency Constrained Service Placement in Edge Computing with Deep Reinforcement Learning_](/publications/#forghieri2025faster), IFIP Networking 2025.
+- [_State Abstraction Discovery from Progressive Disaggregation Methods_](/publications/#forghieri2024state), EWRL 2024.
+- [_Progressive State Space Disaggregation for Infinite Horizon Dynamic Programming_](/publications/#forghieri2024progressive), ICAPS 2024.
+- [Selected research software](/projects/) for state-space disaggregation, MDP solving, Gymnasium environments, and applied forecasting.
 
-## Side Activities
+## Research and applied collaborations
 
+I am interested in research collaborations on scalable decision-making, reinforcement learning, approximate dynamic programming, network/resource optimization, and sequential decision problems in applied domains.
+
+## Academic service
+
+- Doctoral representative on the Laboratory Life Committee, CMAP, École polytechnique, 2024-2025.
 - Reviewer for [ROADEF 2025](https://roadef2025.org/).
 - Alpha tester for the [Marmote MDP solver](https://marmote.gitlabpages.inria.fr/marmote/index.html).
-- Laboratory Life Council PhD Representative at CMAP, Ecole Polytechnique, 2024-2025.
-- Outreach speaker at an IHES meeting with Bachelor students from Ecole Polytechnique, 2023.
+- Mathematics interviewer for the MSc X-HEC Data Science for Business, Feb. 2024.
+- Outreach speaker at an IHES meeting with Bachelor students from École polytechnique, Nov. 2023.
 - Member of CNRS GDR ROD working groups through MyGDR.
+
+## Contact / profiles
+
+- Email: [orso.forghieri@gmail.com](mailto:orso.forghieri@gmail.com).
+- [GitHub](https://github.com/OrsoF).
+- [LinkedIn](https://fr.linkedin.com/in/orso-forghieri).
+- [Google Scholar](https://scholar.google.com/citations?hl=fr&user=6Vzx6MUAAAAJ).
+- [DBLP](https://dblp.org/pid/376/8414.html).
