@@ -13,7 +13,7 @@ profile:
     <p>Ecole Polytechnique</p>
     <p>Palaiseau, France</p>
 
-selected_papers: false
+selected_papers: true
 social: true
 
 announcements:
