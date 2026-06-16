@@ -9,12 +9,12 @@ last_name: Forghieri
 contact_note: >
   Feel free to reach out by email or LinkedIn.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Reinforcement Learning PhD student at Ecole Polytechnique working on Dynamic Programming,
-  Markov Decision Processes, and scalable decision-making.
+  Researcher in Reinforcement Learning and Applied Mathematics working on state abstraction,
+  Dynamic Programming, Markov Decision Processes, and scalable decision-making.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: reinforcement-learning, dynamic-programming, markov-decision-processes, academic-website # add your own keywords or leave empty
+keywords: reinforcement-learning, hierarchical-reinforcement-learning, state-abstraction, approximate-dynamic-programming, markov-decision-processes, academic-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -643,4 +643,3 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
-

@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-subtitle: PhD student in Reinforcement Learning at <a href="https://www.polytechnique.edu/" target="_blank">Ecole Polytechnique</a>
+subtitle: Researcher in Reinforcement Learning and Applied Mathematics
 
 profile:
   align: right
@@ -27,20 +27,33 @@ latest_posts:
   limit: 3
 ---
 
-I am a Reinforcement Learning PhD student at Ecole Polytechnique, Palaiseau, France, working under the supervision of [Erwan Le Pennec](http://www.cmap.polytechnique.fr/~lepennec/fr/), [Hind Castel-Taleb](http://www-public.tem-tsp.eu/~castel/), and [Emmanuel Hyon](https://www.lip6.fr/actualite/personnes-fiche.php?ident=P216).
+I am a researcher in Reinforcement Learning and Applied Mathematics. My PhD work at [Ecole Polytechnique](https://www.polytechnique.edu/), Palaiseau, France, focused on hierarchical reinforcement learning and scalable methods for large Markov Decision Processes, under the supervision of [Erwan Le Pennec](http://www.cmap.polytechnique.fr/~lepennec/fr/), [Hind Castel-Taleb](http://www-public.tem-tsp.eu/~castel/), and [Emmanuel Hyon](https://www.lip6.fr/actualite/personnes-fiche.php?ident=P216).
 
 I hold a Master's degree from Ecole Normale Superieure Paris Saclay and an Engineering Diploma from Ecole Polytechnique.
 
 ## Research
 
-My research lies at the intersection of Reinforcement Learning, Dynamic Programming, and Markov Decision Processes, with a focus on scalable decision-making in high-dimensional environments.
+My research studies how to solve large-scale decision problems when the original state space is too expensive to handle directly. I work on state abstraction, aggregation and disaggregation methods, hierarchical reinforcement learning, and approximate dynamic programming.
 
-I explore methods for state abstraction and hierarchical reinforcement learning, aiming to reduce complexity through divide-and-conquer strategies. These approaches are particularly relevant in applications such as large-scale planning, resource allocation, and network optimization.
+Methodologically, I am interested in the links between abstract Markov Decision Processes, projected Bellman operators, value iteration, Q-value iteration, and policy iteration. A recurring goal is to discover useful low-dimensional structure while preserving enough information to compute strong policies.
 
-Recent work includes abstraction-refinement algorithms and learning-based orchestration methods for dynamic systems, including use cases in edge computing networks.
+These methods are motivated by applications in large-scale planning, resource allocation, network optimization, edge computing, service placement, server energy optimization, market forecasting, and railway-delay propagation modelling.
+
+## Research Interests
+
+- State abstraction and Markov aggregation/disaggregation.
+- Hierarchical reinforcement learning and approximate dynamic programming.
+- Scalable MDP solving, planning, policy iteration, value iteration, and Q-value iteration.
+- Reinforcement learning for resource allocation, network optimization, and edge computing.
+
+## Software
+
+I develop research code for state-space disaggregation, faster MDP solving, Gymnasium environments, and applied forecasting experiments. See the [Software](/projects/) page and my [GitHub profile](https://github.com/OrsoF).
 
 ## Side Activities
 
 - Reviewer for [ROADEF 2025](https://roadef2025.org/).
 - Alpha tester for the [Marmote MDP solver](https://marmote.gitlabpages.inria.fr/marmote/index.html).
 - Laboratory Life Council PhD Representative at CMAP, Ecole Polytechnique, 2024-2025.
+- Outreach speaker at an IHES meeting with Bachelor students from Ecole Polytechnique, 2023.
+- Member of CNRS GDR ROD working groups through MyGDR.
