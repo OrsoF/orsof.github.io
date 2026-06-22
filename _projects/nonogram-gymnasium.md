@@ -9,4 +9,4 @@ Python package implementing the Nonogram puzzle game as an OpenAI Gym / Gymnasiu
 
 Area: reinforcement-learning environments and structured decision problems.
 
-Link: [GitHub profile fallback](https://github.com/OrsoF).
+Link: [GitHub repository](https://github.com/OrsoF/nonogram-gymnasium).

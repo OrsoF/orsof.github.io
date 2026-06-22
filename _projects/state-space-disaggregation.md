@@ -11,4 +11,4 @@ The implementation supports numerical experiments around abstraction refinement,
 
 Area: approximate dynamic programming, state abstraction, Markov aggregation/disaggregation.
 
-Link: [GitHub profile fallback](https://github.com/OrsoF).
+Repository link pending.

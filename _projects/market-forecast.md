@@ -9,4 +9,4 @@ Applied machine-learning project on market forecasting using financial time seri
 
 Area: statistical learning, financial time series, market forecasting.
 
-Link: [GitHub profile fallback](https://github.com/OrsoF).
+Link: [GitHub repository](https://github.com/OrsoF/market_forecast).
