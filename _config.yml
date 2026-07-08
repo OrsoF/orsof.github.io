@@ -6,15 +6,16 @@ title: Orso Forghieri # the website title (if blank, full name will be used inst
 first_name: Orso
 middle_name:
 last_name: Forghieri
+author: Orso Forghieri
 contact_note: >
   Feel free to reach out by email or LinkedIn.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Researcher in Reinforcement Learning and Applied Mathematics working on state abstraction,
-  Dynamic Programming, Markov Decision Processes, and scalable decision-making.
+  Orso Forghieri is a researcher in Reinforcement Learning and Applied Mathematics working on scalable dynamic programming,
+  Markov Decision Processes, state abstraction, resource allocation, edge computing, and systematic trading.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: reinforcement-learning, hierarchical-reinforcement-learning, state-abstraction, approximate-dynamic-programming, markov-decision-processes, academic-website # add your own keywords or leave empty
+keywords: reinforcement-learning, dynamic-programming, approximate-dynamic-programming, markov-decision-processes, state-abstraction, hierarchical-reinforcement-learning, resource-allocation, edge-computing, systematic-trading, academic-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 

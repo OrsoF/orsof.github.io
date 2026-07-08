@@ -11,4 +11,4 @@ The experiments cover random MDPs and classical reinforcement-learning benchmark
 
 Area: Markov Decision Processes, approximate dynamic programming, abstraction discovery.
 
-Link: [GitHub profile fallback](https://github.com/OrsoF).
+Link: [GitHub repository](https://github.com/OrsoF/JMLR2025).
