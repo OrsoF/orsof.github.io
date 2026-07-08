@@ -19,7 +19,7 @@ jobs:
       #          token: ${{ secrets.PAT }}
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.13"
 
@@ -60,6 +60,7 @@ jobs:
             echo "❌ Citation update script failed with exit code $status." >> $GITHUB_STEP_SUMMARY
           fi
           set -e
+          exit $status
 
       - name: Save new citations.yml hash
         id: after
@@ -93,6 +94,10 @@ jobs:
 
       - name: Commit and push if changed
         run: |
+          if [ ! -f _data/citations.yml ]; then
+            echo "_data/citations.yml does not exist; nothing to commit."
+            exit 0
+          fi
           git add _data/citations.yml
           git diff --staged --quiet || (
             echo "📤 Committing and pushing changes..."
