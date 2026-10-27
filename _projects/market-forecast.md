@@ -1,12 +1,10 @@
 ---
 layout: page
 title: Market Forecasting
-description: Forecasting experiments with LSTM, CNN, and NLP models on financial time series and news.
+description: Academic background in machine learning for market forecasting.
 importance: 5
 ---
 
-Applied machine-learning project on market forecasting using financial time series and news headlines. The work explored LSTM, CNN, and NLP-based models for trading-signal construction.
+My engineering coursework included the research project _An Overview of Market Forecast with Machine Learning Techniques_, listed on my [CV]({{ '/cv/' | relative_url }}).
 
-Area: statistical learning, financial time series, market forecasting.
-
-Link: [GitHub repository](https://github.com/OrsoF/market_forecast).
+A public code artifact for this historical project has not been verified. Current, publicly available research software is listed on the [Software page]({{ '/projects/' | relative_url }}).

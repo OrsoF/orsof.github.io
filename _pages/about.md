@@ -2,85 +2,96 @@
 layout: about
 title: Home
 permalink: /
-subtitle: Scalable dynamic programming, reinforcement learning, and applied decision-making
+subtitle: Reinforcement learning, scalable optimization, and research software
+description: Orso Forghieri — reinforcement learning, adaptive state abstraction, efficient LLM adaptation, and reusable Python research software.
 
 profile:
   align: right
   image: portrait.jpg
+  image_alt: Portrait of Orso Forghieri
   image_circular: false
   more_info: >
-    <p>CMAP, École polytechnique</p>
+    <p>Research collaboration</p>
+    <p>École polytechnique</p>
     <p>Institut Polytechnique de Paris</p>
-    <p>Palaiseau, France</p>
 
 selected_papers: false
 social: true
 
 announcements:
   enabled: false
-  scrollable: true
-  limit: 5
-
 latest_posts:
   enabled: false
-  scrollable: true
-  limit: 3
 ---
 
-<div class="mb-3">
-  <a class="btn btn-sm z-depth-0" href="/assets/pdf/cv.pdf">Download CV</a>
-  <a class="btn btn-sm z-depth-0" href="/publications/">Publications</a>
-  <a class="btn btn-sm z-depth-0" href="/projects/">Software</a>
-  <a class="btn btn-sm z-depth-0" href="mailto:orso.forghieri@gmail.com">Email</a>
-</div>
+I am Orso Forghieri, a researcher in reinforcement learning and applied mathematics. I study **state abstraction, dynamic programming, and scalable algorithms** for large sequential decision problems.
 
-I am Orso Forghieri, a researcher in Reinforcement Learning and Applied Mathematics. I work on scalable dynamic programming and reinforcement learning for Markov Decision Processes, with an emphasis on state abstraction, hierarchical methods, and algorithms that make large decision problems computationally tractable.
+Since February 2026, I have been collaborating with École polytechnique on adaptive learning methods. My current work includes **AggQL**, a model-free RL method that refines its state representation using confidence-controlled temporal-difference residual tests, and **Confidence-Adaptive Expert Disaggregation (CAED)**, a method for adapting large language models by dynamically creating LoRA specialists from statistically significant gradient disagreement.
 
-My PhD thesis, _Hierarchical Reinforcement Learning for Large Scale Problems_, was prepared at [École polytechnique](https://www.polytechnique.edu/) / Institut Polytechnique de Paris, within CMAP, under the supervision of [Erwan Le Pennec](http://www.cmap.polytechnique.fr/~lepennec/fr/), [Hind Castel-Taleb](http://www-public.tem-tsp.eu/~castel/), and [Emmanuel Hyon](https://www.lip6.fr/actualite/personnes-fiche.php?ident=P216).
+My applied work connects these methods to resource allocation and latency-constrained edge-network optimization. I develop reusable Python libraries, benchmark algorithms, and build prototypes that validate decisions before integration.
 
-My applied work connects these methods to resource allocation, edge-computing service placement, network optimization, and systematic trading. I have worked on sequential and explainable decision-making methods for systematic equity trading at Qube Research & Technologies, and on reinforcement-learning approaches for latency-constrained service placement in collaboration with Orange Gardens / CMAP.
+<nav class="portfolio-actions" aria-label="Portfolio links">
+  <a href="{{ '/projects/' | relative_url }}">Explore software</a>
+  <a href="{{ '/publications/' | relative_url }}">Publications</a>
+  <a href="{{ '/cv/' | relative_url }}">CV &amp; background</a>
+  <a href="{{ '/assets/pdf/cv.pdf' | relative_url }}">Download CV</a>
+</nav>
 
-I hold a Master's degree from École normale supérieure Paris-Saclay and an Engineering Diploma from École polytechnique.
+<section class="portfolio-section" aria-label="Research and engineering focus">
+  <div class="portfolio-strengths">
+    <div>
+      <h2 class="h5">Research</h2>
+      <p>Reinforcement learning, state abstraction, hierarchical methods, and scalable dynamic programming.</p>
+    </div>
+    <div>
+      <h2 class="h5">Applied optimization</h2>
+      <p>Resource allocation, service placement, and network routing under capacity and latency constraints.</p>
+    </div>
+    <div>
+      <h2 class="h5">Software engineering</h2>
+      <p>Modular Python tooling, reproducible benchmarks, automated tests, and validated integration interfaces.</p>
+    </div>
+  </div>
+</section>
 
-## Research interests
+<section class="portfolio-section" aria-labelledby="selected-software">
+  <h2 id="selected-software">Selected software</h2>
+  <div class="software-grid">
+    {% assign featured_projects = site.data.software | where: 'featured', true %}
+    {% for project in featured_projects %}
+      {% include software-card.liquid project=project compact=true %}
+    {% endfor %}
+  </div>
+  <p class="mt-3"><a href="{{ '/projects/' | relative_url }}">Technical details, figures, and publication code</a></p>
+</section>
 
-- State abstraction.
-- Approximate dynamic programming.
-- Markov aggregation/disaggregation.
-- Scalable MDP solving.
-- Hierarchical reinforcement learning.
-- Planning.
-- Stochastic optimization.
+<section class="portfolio-section" aria-labelledby="research-interests" markdown="1">
+## Research interests {#research-interests}
 
-## Applications
+State abstraction and Markov aggregation/disaggregation; approximate dynamic programming; hierarchical reinforcement learning; planning and stochastic optimization for large MDPs; adaptive representations and parameter-efficient LLM adaptation.
+</section>
 
-- Large-scale planning.
-- Resource allocation.
-- Network optimization.
-- Edge computing and service placement.
-- Market forecasting.
-- Railway-delay propagation.
+<section class="portfolio-section" aria-labelledby="academic-background" markdown="1">
+## Academic background {#academic-background}
 
-## Selected work
+My PhD thesis, _Hierarchical Reinforcement Learning for Large Scale Problems_, was prepared at [École polytechnique](https://www.polytechnique.edu/) / Institut Polytechnique de Paris, within CMAP, under the supervision of [Erwan Le Pennec](https://www.cmap.polytechnique.fr/~lepennec/fr/), [Hind Castel-Taleb](https://samovar.telecom-sudparis.eu/index.php/en/samovar-faculty-and-students/), and [Emmanuel Hyon](https://www.lip6.fr/actualite/personnes-fiche.php?ident=P216).
 
-- [_Hierarchical Reinforcement Learning for Large Scale Problems_](/publications/#forghieri2025hierarchical), PhD thesis, 2025. Problem / Method / Outcome: large-scale reinforcement-learning problems are difficult to solve directly; the thesis studies hierarchical and abstraction-based methods; the result is a framework for more scalable decision-making.
-- [_Faster Latency Constrained Service Placement in Edge Computing with Deep Reinforcement Learning_](/publications/#forghieri2025faster), IFIP Networking 2025. Problem / Method / Outcome: latency-constrained edge service placement is computationally demanding; the work applies deep reinforcement learning; the outcome is faster decision-making for network/resource allocation settings.
-- [_State Abstraction Discovery from Progressive Disaggregation Methods_](/publications/#forghieri2024state), EWRL 2024. Problem / Method / Outcome: useful state abstractions are hard to identify automatically; the method progressively refines aggregated MDP states; the outcome is an abstraction-discovery procedure for reinforcement-learning benchmarks.
-- [_Progressive State Space Disaggregation for Infinite Horizon Dynamic Programming_](/publications/#forghieri2024progressive), ICAPS 2024. Problem / Method / Outcome: infinite-horizon dynamic programming can be intractable on large state spaces; the method starts coarse and disaggregates states progressively; the outcome is a scalable solver strategy for benchmark MDPs.
-- [Selected research software](/projects/) for state-space disaggregation, MDP solving, Gymnasium environments, and applied forecasting.
+I hold a Master's degree from École normale supérieure Paris-Saclay and an Engineering Diploma from École polytechnique. My applied experience includes quantitative research at Qube Research & Technologies and service-placement research with Orange Gardens / CMAP. See my [CV]({{ '/cv/' | relative_url }}) for experience and education, and [Teaching]({{ '/teaching/' | relative_url }}) for academic service.
+</section>
 
-## Research and applied collaborations
+<section class="portfolio-section" aria-labelledby="selected-publications" markdown="1">
+## Selected publications {#selected-publications}
 
-I am interested in research collaborations on scalable decision-making, reinforcement learning, approximate dynamic programming, network/resource optimization, and sequential decision problems in applied domains.
+- [_Hierarchical Reinforcement Learning for Large Scale Problems_]({{ '/publications/' | relative_url }}#forghieri2025hierarchical) — PhD thesis, 2025.
+- [_Faster Latency Constrained Service Placement in Edge Computing with Deep Reinforcement Learning_]({{ '/publications/' | relative_url }}#forghieri2025faster) — TX4NETs workshop at IFIP Networking, 2025.
+- [_State Abstraction Discovery from Progressive Disaggregation Methods_]({{ '/publications/' | relative_url }}#forghieri2024state) — EWRL, 2024.
+- [_Progressive State Space Disaggregation for Infinite Horizon Dynamic Programming_]({{ '/publications/' | relative_url }}#forghieri2024progressive) — ICAPS, 2024.
 
-## Academic service
+[All publications and manuscripts]({{ '/publications/' | relative_url }})
+</section>
 
-Selected service and teaching details are listed on the [CV](/cv/) and [Teaching](/teaching/) pages.
+<section class="portfolio-section" aria-labelledby="contact" markdown="1">
+## Contact {#contact}
 
-## Contact / profiles
-
-- Email: [orso.forghieri@gmail.com](mailto:orso.forghieri@gmail.com).
-- [GitHub](https://github.com/OrsoF).
-- [LinkedIn](https://fr.linkedin.com/in/orso-forghieri).
-- [Google Scholar](https://scholar.google.com/citations?hl=fr&user=6Vzx6MUAAAAJ).
-- [DBLP](https://dblp.org/pid/376/8414.html).
+I welcome research and engineering discussions on scalable decision-making, reinforcement learning, and constrained resource optimization. Contact me at [orso.forghieri@gmail.com](mailto:orso.forghieri@gmail.com) or via the profiles below.
+</section>

@@ -1,0 +1,116 @@
+# Public source audit: 2026-10-14; CV and repository links updated 2026-10-27.
+# See .github/PORTFOLIO_REVIEW.md for evidence and validation limits.
+- id: service-placement-benchmarks
+  name: service-placement-benchmarks
+  category: Constrained optimization
+  status: Research benchmark
+  featured: true
+  github: https://github.com/OrsoF/service-placement-benchmarks
+  documentation: https://github.com/OrsoF/service-placement-benchmarks/blob/main/docs/api.md
+  summary: Compare edge-network service placement and routing strategies under compute, link-capacity, and latency constraints.
+  problem: Edge networks must decide where to host services and how to route demand without violating resource or latency budgets.
+  approach: A shared Python interface compares mathematical optimization, heuristics, evolutionary search, and reinforcement learning on the same network scenarios.
+  capabilities:
+    - Configurable synthetic tree and star networks; a common validator checks placement, routing, flow, capacity, resources, and latency.
+    - CSV exports record objectives, runtimes, feasibility, seeds, and errors; invalid candidates receive no objective score.
+  engineering: Separate domain, solver, and reporting modules; optional solver dependencies; unit, integration, and regression tests; CI on Windows and Linux; CLI and Docker runner.
+  scope: An evaluation toolkit. Connecting decisions to a live network requires a system-specific adapter; mathematical backends require Gurobi and a license.
+  tags: [Python, Optimization, Benchmarking]
+  publications:
+    - label: TX4NETs / IFIP Networking 2025
+      path: /publications/#forghieri2025faster
+  image:
+    path: /assets/img/software/mec-placement-routing.png
+    width: 2078
+    height: 1067
+    alt: Synthetic edge network showing service hosts, directed routes, and link utilization, with a separate view of one service's demands.
+    caption: Synthetic placement and routing example. Orange outlines identify service hosts; arrows and colors show routing and link usage.
+    source: https://github.com/OrsoF/service-placement-benchmarks/blob/main/docs/assets/service-placement-routing.png
+
+- id: mdpforge
+  name: mdpforge
+  category: Sequential decision-making
+  status: Python research library
+  featured: true
+  github: https://github.com/OrsoF/mdpforge
+  documentation: https://github.com/OrsoF/mdpforge/blob/main/README.md
+  summary: Build finite Markov decision processes and compare solvers at a shared target accuracy with reproducible experiments.
+  problem: Solver comparisons need consistent models, accuracy checks, and experiment records to make runtime measurements interpretable.
+  approach: A modular catalogue of finite discounted MDPs and solvers, with registration of custom transition/reward matrices and solve functions.
+  capabilities:
+    - Value iteration, policy iteration, modified policy iteration, and aggregation methods; sparse transition matrices and optional solver backends.
+    - Independent Bellman-residual accuracy checks, repeated trials, scaling experiments, result summaries, and plots.
+  engineering: CSV results with JSON experiment manifests record model fingerprints, seeds, solver settings, versions, and machine details. Tests cover numerical precision, validation, solver selection, and result handling.
+  scope: Research tooling for finite discounted MDPs. Empirical runtimes depend on the model, accuracy target, backend, and hardware.
+  tags: [Python, Dynamic programming, Reproducibility]
+  image:
+    path: /assets/img/software/mdpforge-accuracy.png
+    width: 2301
+    height: 944
+    alt: Three benchmark panels comparing solver runtime with a certified value-error bound relative to the requested precision.
+    caption: Saved illustrative trials on Garnet, Chain Walk, and Rooms. The dashed line marks the target value-error bound; this is a bound, not the unknown actual error.
+    source: https://github.com/OrsoF/mdpforge/blob/main/artifacts/figures/readme_accuracy.png
+
+- id: service-placement-deployable
+  name: service-placement-deployable
+  category: Software integration
+  status: Research / engineering prototype
+  featured: true
+  github: https://github.com/OrsoF/service-placement-deployable
+  documentation: https://github.com/OrsoF/service-placement-deployable/blob/main/docs/technical-guide.md
+  summary: Train PPO policies for edge-network service placement, routing, and bandwidth allocation, then validate and export decisions through CLI and HTTP interfaces.
+  problem: A placement strategy needs explicit input contracts, feasibility checks, and machine-readable decisions before it can be integrated into an orchestrator.
+  approach: A saved PPO policy guides a sequence of placement, directed-routing, and integer-bandwidth edits under CPU, link-capacity, and load-dependent latency constraints.
+  capabilities:
+    - Greedy and routing-lookahead baselines, optional learned-policy inference, and independent feasibility validation.
+    - Versioned JSON input/output, a decision CLI, and a small HTTP adapter with input validation and algorithm diagnostics.
+  engineering: Deterministic synthetic scenarios, unit and integration tests, CI with an RL smoke check, and Docker packaging. Automatic candidate selection records failures and can fall back to a feasible baseline.
+  scope: A synthetic-data demonstrator. It does not apply network changes, bundle a trained policy, or establish learned-policy superiority. Live orchestration requires an adapter; the HTTP demo is not a production service.
+  tags: [Python, Reinforcement learning, Integration]
+  publications:
+    - label: Related service-placement research
+      path: /publications/#forghieri2025faster
+  image:
+    path: /assets/img/software/mec-integration.svg
+    width: 1200
+    height: 360
+    alt: Network JSON enters a decision engine and produces validated JSON. A separate adapter, still to be developed, connects it to an orchestrator.
+    caption: Integration boundary, adapted from the public repository diagram. The network adapter remains to be developed; the prototype exports decisions only.
+    source: https://github.com/OrsoF/service-placement-deployable/blob/ee793785f1cc274755e1c6c5b77cbafb76c91eb6/docs/assets/integration.svg
+
+- id: state-space-disaggregation
+  name: State-space disaggregation
+  category: State abstraction
+  status: Publication research code
+  featured: false
+  github: https://github.com/OrsoF/state_space_disaggregation
+  documentation: https://github.com/OrsoF/state_space_disaggregation/blob/main/README.md
+  summary: Progressive refinement of aggregated state spaces for infinite-horizon dynamic programming, accompanying the ICAPS 2024 paper.
+  problem: Large MDPs make direct dynamic programming expensive; useful state distinctions must be recovered from coarse abstractions.
+  approach: Aggregate Bellman updates alternate with partition refinement based on value or policy information.
+  capabilities:
+    - Models include Rooms, Garnet, racetracks, tandem queues, and weakly coupled MDPs.
+    - An experiment runner compares solvers and exports runtime measurements to spreadsheets.
+  engineering: Separate model, solver, and partition utilities with a documented experiment entry point. This historical experiment repository has no automated test suite or CI workflow in the audited public tree.
+  scope: Publication-specific research code; the full experiment campaign is documented as taking several days.
+  tags: [Python, State abstraction, ICAPS 2024]
+  publications:
+    - label: ICAPS 2024 paper
+      path: /publications/#forghieri2024progressive
+
+- id: nonogram-gymnasium
+  name: nonogram-gymnasium
+  category: RL environments
+  status: Experimental environment
+  featured: false
+  github: https://github.com/OrsoF/nonogram-gymnasium
+  documentation: https://github.com/OrsoF/nonogram-gymnasium/blob/main/README.md
+  summary: A compact Gymnasium environment for learning to solve Nonogram puzzles from row and column clues.
+  problem: Structured puzzles provide small, inspectable decision problems for exploring observations, rewards, and agent behavior.
+  approach: A hidden binary grid, clue-based observations, and cell/value actions exposed through Gymnasium reset and step interfaces.
+  capabilities:
+    - Seeded puzzle generation, configurable board size and episode length, rendering, and explicit termination/truncation behavior.
+    - Random-agent and terminal-play examples, a notebook demo, and a DQN training example using an action wrapper.
+  engineering: Environment and reward tests; linting, formatting, and typing checks in CI across Python 3.10–3.12.
+  scope: A toy research environment with a simple reward function and no correction action for previously played cells.
+  tags: [Python, Gymnasium, Testing]

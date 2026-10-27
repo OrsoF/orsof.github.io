@@ -1,0 +1,83 @@
+{% comment %}Keep formatted include output in one HTML block when embedded in Markdown pages.{% endcomment %}
+{% capture software_card %}
+{% assign project = include.project %}
+<article
+  class="software-card{% if include.compact %} software-card--compact{% endif %}"
+  {% unless include.compact %}
+    id="{{ project.id }}"
+  {% endunless %}
+>
+  <p class="software-card__category">{{ project.category | escape }}</p>
+  {% if include.heading == 'h2' %}
+    <h2 class="software-card__title">
+      <a href="{{ project.github }}">{{ project.name | escape }}</a>
+    </h2>
+  {% else %}
+    <h3 class="software-card__title">
+      <a href="{{ project.github }}">{{ project.name | escape }}</a>
+    </h3>
+  {% endif %}
+  <p class="software-card__status">{{ project.status | escape }}</p>
+  <p class="software-card__summary">{{ project.summary | escape }}</p>
+  {% if include.compact %}
+    <ul class="software-card__tags" aria-label="Project topics">
+      {% for tag in project.tags %}
+        <li>{{ tag | escape }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <dl class="software-card__details">
+      <dt>Problem</dt>
+      <dd>{{ project.problem | escape }}</dd>
+      <dt>Approach</dt>
+      <dd>{{ project.approach | escape }}</dd>
+      <dt>Implemented</dt>
+      <dd>
+        <ul>
+          {% for capability in project.capabilities %}
+            <li>{{ capability | escape }}</li>
+          {% endfor %}
+        </ul>
+      </dd>
+      <dt>Engineering</dt>
+      <dd>{{ project.engineering | escape }}</dd>
+    </dl>
+    <p class="software-card__scope"><strong>Scope.</strong> {{ project.scope | escape }}</p>
+  {% endif %}
+  <div class="software-card__links">
+    <a href="{{ project.github }}" aria-label="{{ project.name | escape }} on GitHub">GitHub</a>
+    {% if include.compact %}
+      <a href="{{ '/projects/' | relative_url }}#{{ project.id }}" aria-label="Technical details for {{ project.name | escape }}"
+        >Technical details</a
+      >
+    {% else %}
+      <a href="{{ project.documentation }}" aria-label="Documentation for {{ project.name | escape }}">Documentation</a>
+      {% for publication in project.publications -%}
+        <a href="{{ publication.path | relative_url }}">{{ publication.label | escape }}</a>
+      {%- endfor %}
+    {% endif %}
+  </div>
+  {% unless include.compact %}
+    {% if project.image %}
+      <figure class="software-card__figure">
+        <a href="{{ project.image.path | relative_url }}" aria-label="View full-size figure for {{ project.name | escape }}">
+          <img
+            src="{{ project.image.path | relative_url }}"
+            width="{{ project.image.width }}"
+            height="{{ project.image.height }}"
+            alt="{{ project.image.alt | escape }}"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <figcaption>
+          {{ project.image.caption | escape }}
+          <a href="{{ project.image.source }}">Source figure</a>.
+        </figcaption>
+      </figure>
+    {% endif %}
+  {% endunless %}
+</article>
+
+{% endcapture %}
+{{ software_card | strip_newlines | strip }}

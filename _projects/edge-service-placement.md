@@ -1,12 +1,9 @@
 ---
 layout: page
 title: Edge Service Placement
-description: Reinforcement-learning methods for latency-constrained service placement in edge-computing networks.
+description: Optimization and reinforcement-learning benchmarks for constrained service placement in edge-computing networks.
 importance: 3
 ---
 
-Research code and experiments for latency-constrained service placement in edge-computing infrastructures, developed in collaboration with Orange Gardens and CMAP in an industrial 6G research context.
-
-The problem combines network-flow constraints, latency constraints, and computational-resource allocation. The reinforcement-learning approach aims to accelerate decision-making compared with exact integer-linear-programming formulations.
-
-Area: edge computing, service placement, network/resource optimization.
+{% assign project = site.data.software | where: 'id', 'service-placement-benchmarks' | first %}
+{% include software-card.liquid project=project heading='h2' %}
