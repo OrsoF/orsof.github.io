@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-software",
           title: "Software",
-          description: "Research software and selected code artifacts.",
+          description: "Python research libraries, constrained optimization benchmarks, and network orchestration prototypes.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -39,29 +39,29 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Curriculum vitae.",
+          description: "Research experience, education, and software in reinforcement learning and applied mathematics.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
           },
         },{id: "projects-edge-service-placement",
           title: 'Edge Service Placement',
-          description: "Reinforcement-learning methods for latency-constrained service placement in edge-computing networks.",
+          description: "Optimization and reinforcement-learning benchmarks for constrained service placement in edge-computing networks.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/edge-service-placement/";
             },},{id: "projects-disaggregation-experiments",
           title: 'Disaggregation Experiments',
-          description: "Experimental code for faster MDP solving and state abstraction discovery.",
+          description: "Research on MDP solving and state abstraction discovery.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/jmlr2025-disaggregation-code/";
             },},{id: "projects-market-forecasting",
           title: 'Market Forecasting',
-          description: "Forecasting experiments with LSTM, CNN, and NLP models on financial time series and news.",
+          description: "Academic background in machine learning for market forecasting.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/market-forecast/";
             },},{id: "projects-nonogram-gymnasium",
           title: 'nonogram-gymnasium',
-          description: "Python package implementing Nonogram as an OpenAI Gym / Gymnasium environment.",
+          description: "Python package implementing Nonogram as an Gymnasium environment.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/nonogram-gymnasium/";
             },},{id: "projects-state-space-disaggregation",
